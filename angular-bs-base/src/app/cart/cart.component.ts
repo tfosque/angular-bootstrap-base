@@ -106,7 +106,7 @@ const data = [
   styleUrls: ['./cart.component.scss']
 })
 export class CartComponent implements OnInit {
-  defaultColumns = ['first', 'last', 'email'];
+  defaultColumns = ['first', 'imgUrl', 'last', 'email'];
   dataSource: Data[] = data;
   constructor() { }
 
