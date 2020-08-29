@@ -17,7 +17,6 @@ export class LineItemDirective implements OnInit {
     this.el.nativeElement.style.border = 'solid thin #e8e8e8';
 
     setTimeout(() => {
-      this.buildColumns();
       this.el.nativeElement.innerHTML = this.buildColumns();
     }, 1000);
   }
