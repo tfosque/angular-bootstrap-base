@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col-12 mt-3 mb-3">
+    <h5>
+      <i class="fa fa-shopping-cart"></i> Shopping Cart
+    </h5>
+  </div>
+
+  <div class="col" *ngFor="let dataItem of dataSource" style="margin: 4px 0px;">
+    <div
+      style="padding: 15px; width: 344px; text-align: center"
+      lineItem
+      [columns]="defaultColumns "
+      [dataItem]="dataItem"
+      width="200"
+    ><i class="fa fa-spinner fa-spin"></i></div>
+  </div>
+
+</div>
