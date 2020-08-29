@@ -14,8 +14,6 @@ export class LineItemDirective implements OnInit {
   ) { }
 
   ngOnInit() {
-    console.log(this.dataItem);
-
     this.el.nativeElement.style.border = 'solid thin #e8e8e8';
 
     setTimeout(() => {
