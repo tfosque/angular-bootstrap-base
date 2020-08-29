@@ -5,13 +5,12 @@
     </h5>
   </div>
 
-  <div class="col" *ngFor="let dataItem of dataSource" style="margin: 4px 0px;">
+  <div class="col d-md-none" *ngFor="let dataItem of dataSource" style="margin: 4px 0px;">
     <div
       style="padding: 15px; width: 344px; text-align: center"
       lineItem
       [columns]="defaultColumns "
       [dataItem]="dataItem"
-      width="200"
     ><i class="fa fa-spinner fa-spin"></i></div>
   </div>
 

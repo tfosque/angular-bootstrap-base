@@ -8,7 +8,6 @@ import { Data } from '../cart/cart.component';
 export class LineItemDirective implements OnInit {
   @Input() columns: string[] = [];
   @Input() dataItem: Data;
-  @Input() width: number;
 
   constructor(
     private el: ElementRef
@@ -28,7 +27,7 @@ export class LineItemDirective implements OnInit {
   }
 
   displayUI() {
-    return `<div class="d-md-none" style="padding: 10px; width: ${this.width}px;">${this.dataItem.last}</div>`;
+    return `<div class="d-md-none" style="padding: 10px;">${this.dataItem.last}</div>`;
   }
 
   displayWithColoumns() {
@@ -41,23 +40,16 @@ export class LineItemDirective implements OnInit {
 
     Object.keys(this.dataItem).map(dataCol => {
       this.columns.filter(col => {
-        // dataCol === col ? console.log({dataCol}, {col}) : console.log("nope.....");
         if (dataCol === col) {
           if (col.includes('Url')) {
             ui.push(`<img style="float: left" src="${this.dataItem[col]}" />`);
-
           } else {
             ui.push(`<div style="text-align: left">${this.dataItem[col]}</div>`);
           }
-
         }
-        // console.log({dataCol});
-        // console.log({col});
-        // console.log({ui});
-        console.log('join:', ui.join(''));
       });
-
     });
+     // console.log('join:', ui.join(''));
     return ui.join('');
   }
 
