@@ -22,7 +22,6 @@ export class LineItemDirective implements OnInit {
     setTimeout(() => {
       this.buildColumns();
       this.el.nativeElement.innerHTML = this.buildColumns();
-      // console.log('value:', this.el.nativeElement.textContent = this.dataItem.first);
     }, 1000);
   }
 
