@@ -1,0 +1,46 @@
+<!-- <div class="example-boundary">
+  <div class="example-box" cdkDragBoundary=".example-boundary" cdkDrag>
+    <div>A</div><span>1</span>
+  </div>
+  <app-rack></app-rack>
+</div> -->
+
+
+<div cdkDropListGroup>
+  <div class="example-container">
+    <h2>To do</h2>
+
+    <div
+      cdkDropList
+      [cdkDropListData]="todo"
+      class="example-list"
+      (cdkDropListDropped)="drop($event)">
+      <div class="example-box" *ngFor="let item of todo" cdkDrag>{{item}}</div>
+    </div>
+  </div>
+
+  <div class="example-container">
+    <div
+      cdkDropList
+      [cdkDropListData]="done"
+      class="example-list"
+      (cdkDropListDropped)="drop($event)">
+      <div class="example-box" *ngFor="let item of done" cdkDrag>{{item}}</div>
+    </div>
+
+  </div>
+
+  <div class="example-container">
+    <h2>Teams</h2>
+    <div
+      cdkDropList
+      [cdkDropListData]="teams"
+      class="example-list"
+      (cdkDropListDropped)="drop($event)">
+      <div class="example-box" *ngFor="let item of teams" cdkDrag>{{item}}</div>
+    </div>
+  </div>
+
+</div>
+
+
